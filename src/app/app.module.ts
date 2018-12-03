@@ -9,11 +9,11 @@ import { fakeBackendProvider } from './_helpers';
 import { AppComponent }  from './app.component';
 import { routing }        from './app.routing';
 
-import { AlertComponent } from './_components';
+
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { HomeComponent } from './home';
 import { LoginComponent } from './login';
-import { RegisterComponent } from './register';
+
 
 @NgModule({
     imports: [
@@ -24,10 +24,8 @@ import { RegisterComponent } from './register';
     ],
     declarations: [
         AppComponent,
-        AlertComponent,
         HomeComponent,
-        LoginComponent,
-        RegisterComponent
+        LoginComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
